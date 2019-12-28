@@ -1,7 +1,7 @@
 import os
 # from flask_appbuilder.security.manager import (
 #    AUTH_REMOTE_USER,
-#    AUTH_OID,
+    AUTH_OID
 #    AUTH_DB,
 #    AUTH_LDAP,
 #    AUTH_OAUTH,
@@ -37,29 +37,29 @@ CSRF_ENABLED = True
 # AUTH_DB : Is for database (username/password()
 # AUTH_LDAP : Is for LDAP
 # AUTH_REMOTE_USER : Is for using REMOTE_USER from web server
-# AUTH_TYPE = AUTH_REMOTE_USER
+AUTH_TYPE = AUTH_OID
 
 # Uncomment to setup Full admin role name
-# AUTH_ROLE_ADMIN = 'Admin'
+AUTH_ROLE_ADMIN = 'Admin'
 
 # Uncomment to setup Public role name, no authentication needed
 AUTH_ROLE_PUBLIC = 'Public'
 
 # Will allow user self registration
-# AUTH_USER_REGISTRATION = True
+AUTH_USER_REGISTRATION = True
 
 # The default user self registration role
-# AUTH_USER_REGISTRATION_ROLE = "Public"
+AUTH_USER_REGISTRATION_ROLE = "Public"
 
 # When using LDAP Auth, setup the ldap server
 # AUTH_LDAP_SERVER = "ldap://ldapserver.new"
 
 # Uncomment to setup OpenID providers example for OpenID authentication
-# OPENID_PROVIDERS = [
-#    { 'name': 'Yahoo', 'url': 'https://me.yahoo.com' },
-#    { 'name': 'AOL', 'url': 'http://openid.aol.com/<username>' },
-#    { 'name': 'Flickr', 'url': 'http://www.flickr.com/<username>' },
-#    { 'name': 'MyOpenID', 'url': 'https://www.myopenid.com' }]
+OPENID_PROVIDERS = [
+    { 'name': 'Yahoo', 'url': 'https://me.yahoo.com' },
+    { 'name': 'AOL', 'url': 'http://openid.aol.com/<username>' },
+    { 'name': 'Flickr', 'url': 'http://www.flickr.com/<username>' },
+    { 'name': 'MyOpenID', 'url': 'https://www.myopenid.com' }]
 # ---------------------------------------------------
 # Babel config for translations
 # ---------------------------------------------------

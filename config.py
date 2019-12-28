@@ -1,8 +1,8 @@
 import os
 from flask_appbuilder.security.manager import (
 #    AUTH_REMOTE_USER,
-   AUTH_OID
-#    AUTH_DB,
+#    AUTH_OID,
+    AUTH_DB
 #    AUTH_LDAP,
 #    AUTH_OAUTH,
 )
@@ -37,7 +37,7 @@ CSRF_ENABLED = True
 # AUTH_DB : Is for database (username/password()
 # AUTH_LDAP : Is for LDAP
 # AUTH_REMOTE_USER : Is for using REMOTE_USER from web server
-AUTH_TYPE = AUTH_OID
+AUTH_TYPE = AUTH_DB
 
 # Uncomment to setup Full admin role name
 AUTH_ROLE_ADMIN = 'Admin'

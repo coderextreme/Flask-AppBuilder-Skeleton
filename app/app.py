@@ -16,6 +16,10 @@ def home():
 def index():
     return render_template('login.html', message='')
 
+@app.route("/login/login")
+def index():
+    return render_template('login', message='')
+
 urls = '''
 https://www.google.com/
 https://www.yahoo.com/

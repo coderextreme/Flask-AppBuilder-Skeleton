@@ -6,11 +6,6 @@ from flask import make_response
 from flask_google_recaptcha import GoogleReCaptcha
 
 app = Flask(__name__)
-app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] = 'public'
-app.config['RECAPTCHA_PRIVATE_KEY'] = 'private'
-app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
-recaptcha = GoogleReCaptcha(app=app)
 
 @app.route("/")
 def home():

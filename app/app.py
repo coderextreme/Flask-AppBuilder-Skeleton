@@ -3,10 +3,10 @@ import six
 
 from flask import Flask, render_template, redirect, url_for,request
 from flask import make_response
-app = Flask(__name__)
+from flask_google_recaptcha import GoogleReCaptcha
 
-app.config['TESTING'] = True
-app.login_manager.init_app(app)
+app = Flask(__name__)
+recaptcha = GoogleReCaptcha(app=app)
 
 @app.route("/")
 def home():

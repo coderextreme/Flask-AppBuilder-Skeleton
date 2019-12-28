@@ -5,6 +5,9 @@ from flask import Flask, render_template, redirect, url_for,request
 from flask import make_response
 app = Flask(__name__)
 
+app.config['TESTING'] = True
+app.login_manager.init_app(app)
+
 @app.route("/")
 def home():
     return "hi"

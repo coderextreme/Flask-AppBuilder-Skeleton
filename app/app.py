@@ -25,6 +25,8 @@ def login():
    message = None
    if request.method == 'GET':
         datafromjs = request.args.get('mydata')
+        if datafromjs == None:
+            datafromjs = urls
         # Add Summarization and Bias code here.
         news = []
         for url in datafromjs.strip().split("\n"):
